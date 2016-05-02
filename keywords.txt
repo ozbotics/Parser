@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map For Parser
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Parser	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+#Parser
+getNextToken	KEYWORD2
+parseDelim	KEYWORD2
+parseToken	KEYWORD2
+parseLiteral	KEYWORD2
+parseString	KEYWORD2
+parseBool	KEYWORD2
+parseFloat	KEYWORD2
+parseInt	KEYWORD2
+parseUInt	KEYWORD2
+parseEnd	KEYWORD2
+intIsBetween	KEYWORD2
+stringLengthIsBetween	KEYWORD2
+stringHasNoSpaces	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
