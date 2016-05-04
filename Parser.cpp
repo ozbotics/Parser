@@ -49,7 +49,7 @@ bool Parser::parseToken(char ** inputBufP, int * tokenId, const char * tokenArra
   return ok;
 }
 
-bool Parser::parseLiteral(char ** inputBufP, char * literal) {
+bool Parser::parseLiteral(char ** inputBufP, char const * literal) {
   char token[maxTokenSize];
   bool ok = false;
   

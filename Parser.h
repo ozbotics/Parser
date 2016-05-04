@@ -26,7 +26,7 @@ class Parser {
     bool parseDelim(char ** inputBufP);
     bool parseToken(char ** inputBufP, int * tokenId, const char * tokenArray[]	, int tokenArraySize);
     
-    bool parseLiteral(char ** inputBufP, char * value);
+    bool parseLiteral(char ** inputBufP, char const * value);
     
     bool parseString(char ** inputBufP, char * value);
     bool parseBool(char ** inputBufP, bool * value);
