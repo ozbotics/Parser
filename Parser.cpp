@@ -162,12 +162,6 @@ bool Parser::parseUInt(char ** inputBufP, unsigned int * value) {
 }
 
 bool Parser::parseEnd(char ** inputBufP) {
-  Serial.println(F("Entered parseEnd"));
-  Serial.print(F("ch is "));
-  Serial.print(**inputBufP );
-  Serial.print(F(", "));
-  Serial.print((byte) **inputBufP );
-  
   return (**inputBufP == 0);
 }
 
