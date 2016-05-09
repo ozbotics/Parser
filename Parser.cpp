@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include "Parser.h"
 
-void Parser::getNextToken(char ** inputBufP, char * token, char sentinel) {
+void Parser::_getNextToken(char ** inputBufP, char * token, char sentinel) {
   char * tokenCursor = token;
   
   while ((**inputBufP != 0) && (**inputBufP != sentinel)) {
@@ -31,7 +31,7 @@ bool Parser::parseToken(char ** inputBufP, int * tokenId, const char * tokenArra
   char token[maxTokenSize]; 
   
   char * origCursor = *inputBufP;
-  getNextToken(inputBufP, token);
+  _getNextToken(inputBufP, token);
 
   for (int id=0; id<tokenArraySize; id++) {
     if (strcmp(tokenArray[id], token) == 0) {
@@ -54,7 +54,7 @@ bool Parser::parseLiteral(char ** inputBufP, char const * literal) {
   bool ok = false;
   
   char * origCursor = *inputBufP;
-  getNextToken(inputBufP, token);
+  _getNextToken(inputBufP, token);
 
   if (strcmp(literal, token) == 0) {
     ok = true;
@@ -72,7 +72,7 @@ bool Parser::parseString(char ** inputBufP, char * value) {
   bool ok = false;
 
   char * origCursor = *inputBufP;
-  getNextToken(inputBufP, value);
+  _getNextToken(inputBufP, value);
   
   if (strlen(value) > 0) {
     ok = true;
